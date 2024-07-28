@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* General styling for the body */
+body {
+    font-family: "Pacifico", cursive; /* Set the font family for the body */
+    background-color: #f5f5f5; /* Light grey background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the main title */
+/* Styling for the main title */
+h1 {
+    color: #333; /* Dark grey text color */
+    text-align: center; /* Center the text */
+    margin-bottom: 40px; /* Increase space below the title */
+    padding-bottom: 10px; /* Add padding at the bottom */
+}
+
+
+/* Main container styling */
+.main {
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 50%; /* 90% of the viewport width */
+    height: 80%;
+    max-width: 600px; /* Maximum width of 500px */
+    max-height: 900px;
+    padding: 20px; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    position: relative; /* For absolute positioning of children */
+}
+
+/* Positioning the main title inside the main container */
+h1 {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* 10px from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to exactly center */
+    margin: 0; /* Remove default margin */
+}
+
+/* Name input section styling */
+.name {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    margin: 60px 0 20px 0; /* Adjusted for title position */
+}
+
+/* Icon inside the name input section */
+.name span {
+    margin-right: 10px; /* Space to the right of the icon */
+    color: #666; /* Grey color for the icon */
+}
+
+/* Name input field styling */
+.name-input {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+}
+
+/* Message container styling */
+.message-container {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 60%; /* Maximum height of 300px */
+    overflow-y: auto; /* Scroll vertically if content overflows */
+    overflow-x: hidden;
+    border: 1px solid #eee; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the container */
+    padding: 10px; /* Padding inside the container */
+    position: relative; /* For absolute positioning of children */
+}
+
+/* General message item styling */
+.message-container li {
+    margin-bottom: 10px; /* Space below each message */
+}
+
+/* Styling for messages from other users */
+.message-left, .message-right {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+}
+
+/* Common styling for message content */
+.message-left .message, .message-right .message {
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the message */
+    font-size: 14px; /* Font size */
+    position: relative; /* For potential future positioning */
+}
+
+/* Specific styling for messages from the current user */
+.message-right .message {
+    background-color: #cfe9ff; /* Light blue background */
+    align-self: flex-end; /* Align to the right */
+}
+
+/* Timestamp styling within messages */
+.message-left .message span, .message-right .message span {
+    display: block; /* Block display */
+    font-size: 12px; /* Smaller font size */
+    color: #666; /* Grey text color */
+    margin-top: 5px; /* Space above the timestamp */
+}
+
+/* Feedback message styling */
+.message-feedback {
+    font-style: italic; /* Italic text */
+    color: #888; /* Grey color */
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Vertical margin */
+    position: static; /* Default positioning */
+    padding:0px 10px; /* Add padding */
+}
+
+
+/* Message form styling */
+.message-form {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    border-top: 1px solid #eee; /* Light grey top border */
+    padding-top: 10px; /* Padding above the form */
+}
+
+/* Message input field styling */
+.message-input {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    margin-right: 10px; /* Space to the right of the input */
+}
+
+/* Message submit button styling */
+.message-submit {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Icon inside the submit button */
+.message-submit i {
+    margin-left: 5px; /* Space to the left of the icon */
+}
+
+/* Styling for the total clients text */
+.clients-total {
+    text-align: center; /* Center the text */
+    color: #666; /* Grey text color */
+    font-size: 14px; /* Font size */
+}
+
+/* Media queries for tablets */
+@media (max-width: 768px) {
+    .main {
+        width: 95%; /* 95% of the viewport width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .name {
+        margin: 50px 0 15px 0; /* Adjust margin for title position */
+    }
+
+    .message-container {
+        max-height: 350px; /* Reduce max height */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .message-input {
+        padding: 8px; /* Reduce padding inside the input */
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .message-submit {
+        padding: 8px 15px; /* Reduce padding inside the button */
+    }
+}
+
+/* Media queries for phones */
+@media (max-width: 480px) {
+    .main {
+        width: 100%; /* Full viewport width */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .name {
+        margin: 40px 0 10px 0; /* Adjust margin for title position */
+    }
+
+    .message-container {
+        max-height: 300px; /* Further reduce max height */
+        padding: 5px; /* Further reduce padding */
+    }
+
+    .message-input {
+        padding: 5px; /* Further reduce padding inside the input */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .message-submit {
+        padding: 5px 10px; /* Further reduce padding inside the button */
+    }
+}
