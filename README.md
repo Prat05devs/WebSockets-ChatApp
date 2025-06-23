@@ -1,5 +1,7 @@
 # Hommies 📞 - Real-Time Group Chat Application
 
+URL :- https://websockets-chatapp-production.up.railway.app/
+
 ## Introduction
 
 Welcome to **Hommies 📞**, a real-time group chat application built with WebSockets and Socket.io. This project demonstrates the power of WebSockets in creating a dynamic, interactive chat experience with features like typing indicators and real-time user updates.
